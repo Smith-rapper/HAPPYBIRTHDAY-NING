@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#160d24">
+  <meta name="description" content="A little universe made just for you — birthday surprise">
+  <title>For You, My Universe ♡</title>
+  <link rel="icon" href="assets/heart.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <canvas id="fxCanvas" aria-hidden="true"></canvas>
+  <div id="petalLayer" class="petal-layer" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="กลับหน้าแรก"><span class="brand-mark">♡</span><span>OUR LITTLE UNIVERSE</span></a>
+    <nav class="desktop-nav" aria-label="เมนูหลัก">
+      <a href="#home">หน้าแรก</a><a href="#story">เรื่องของเรา</a><a href="#reasons">เหตุผลที่รัก</a><a href="#memories">ความทรงจำ</a><a href="#letter">จดหมาย</a>
+    </nav>
+    <div class="top-actions">
+      <button class="icon-btn" id="musicToggle" title="เปิด/ปิดเสียง" aria-label="เปิดหรือปิดเสียง">♫</button>
+      <button class="icon-btn" id="openSettings" title="ปรับแต่งเว็บ" aria-label="ตั้งค่า">⚙</button>
+      <button class="menu-btn" id="menuToggle" aria-label="เปิดเมนู">☰</button>
+    </div>
+  </header>
+  <nav id="mobileNav" class="mobile-nav" aria-label="เมนูมือถือ"><a href="#home">หน้าแรก</a><a href="#story">เรื่องของเรา</a><a href="#reasons">เหตุผลที่รัก</a><a href="#memories">ความทรงจำ</a><a href="#letter">จดหมาย</a><a href="#surprises">ของขวัญ</a></nav>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="eyebrow-line"></span> TODAY IS ALL ABOUT YOU <span class="eyebrow-line"></span></div>
+        <p class="small-intro">ถึงคนพิเศษที่สุดในจักรวาลของเค้า</p>
+        <h1>Happy Birthday<br><em id="heroName">My Love</em><span class="hero-heart">♥</span></h1>
+        <p class="hero-subtitle" id="heroGreeting">วันนี้โลกทั้งใบดูสดใสขึ้น เพราะเป็นวันที่คนที่เค้ารักได้เกิดมา</p>
+        <div class="hero-buttons"><a class="btn btn-primary" href="#surprises">เปิดเซอร์ไพรส์ <span>✦</span></a><button class="btn btn-ghost" id="replayIntro">ดูโมเมนต์เปิดเว็บอีกครั้ง ↗</button></div>
+        <div class="hero-meta"><span class="online-dot"></span><span>MADE WITH <b>ALL MY LOVE</b></span><span class="meta-divider">/</span><span id="heroDate">A DAY JUST FOR YOU</span></div>
+      </div>
+      <div class="hero-art reveal">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div>
+        <div class="planet-glow"></div>
+        <div class="hero-photo-frame" id="heroPhotoFrame"><img id="heroPhoto" src="assets/couple-placeholder.svg" alt="รูปความทรงจำของเรา"><div class="photo-caption">you are my favorite person ♡</div></div>
+        <span class="float-heart heart-one">♥</span><span class="float-heart heart-two">♡</span><span class="float-star star-one">✦</span><span class="float-star star-two">✧</span>
+        <div class="round-stamp"><span>YOU ARE</span><strong>MY<br>WORLD</strong><span>FOREVER ♡</span></div>
+      </div>
+      <a class="scroll-cue" href="#countdown"><span class="scroll-line"></span> SCROLL TO FEEL THE LOVE</a>
+    </section>
+
+    <section class="countdown-section section" id="countdown">
+      <div class="section-label">01 / A SPECIAL DAY</div>
+      <div class="countdown-heading"><div><p class="kicker">THE STARS ALIGNED</p><h2>วันที่แสนพิเศษ<br><em>ของคนแสนพิเศษ</em></h2></div><p class="section-intro">ถ้าย้อนเวลากลับไปได้ เค้าก็ยังอยากให้โลกใบนี้มีเธออยู่เหมือนเดิมทุกครั้งเลยนะ</p></div>
+      <div class="countdown-card"><div class="countdown-copy"><span class="tiny-label">COUNTING EVERY BEAUTIFUL SECOND</span><h3 id="countdownTitle">เวลาที่โลกโชคดีที่มีเธอ</h3><p id="countdownDescription">และวันนี้เราจะฉลองให้กับการมีอยู่ของเธอ</p></div><div class="countdown-units" id="countdownUnits"><div class="time-unit"><strong id="days">00</strong><span>DAYS</span></div><div class="time-unit"><strong id="hours">00</strong><span>HOURS</span></div><div class="time-unit"><strong id="minutes">00</strong><span>MINUTES</span></div><div class="time-unit"><strong id="seconds">00</strong><span>SECONDS</span></div></div><div class="countdown-sparkle">✦</div></div>
+      <div class="mini-note"><span>♡</span> ไม่ว่าจะผ่านไปกี่วัน เค้าก็ยังเลือกเธอเหมือนเดิม <span>♡</span></div>
+    </section>
+
+    <section class="story-section section" id="story">
+      <div class="section-label">02 / OUR STORY</div>
+      <div class="story-grid"><div class="story-visual reveal"><div class="story-big-number">∞</div><div class="story-photo"><img id="storyPhoto" src="assets/couple-placeholder.svg" alt="ภาพแทนเรื่องราวของเรา"></div><div class="story-tag">THE BEST PLOT TWIST<br>WAS MEETING YOU</div><div class="tiny-heart t-heart-one">♥</div><div class="tiny-heart t-heart-two">♡</div></div><div class="story-copy reveal"><p class="kicker">A LOVE THAT FEELS LIKE HOME</p><h2>เธอคือเรื่องบังเอิญ<br>ที่ <em>ดีที่สุด</em> ของเค้า</h2><p class="body-large" id="storyText">ตั้งแต่วันที่ได้รู้จักกัน โลกธรรมดา ๆ ของเค้าก็มีสีสันขึ้นมา เธอทำให้วันธรรมดากลายเป็นวันที่อยากจดจำ และทำให้คำว่า “ความสุข” มีหน้าตาชัดเจนขึ้นมา</p><div class="story-stats"><div><strong id="togetherDays">∞</strong><span>วันที่อยากมีเธออยู่ด้วย</span></div><div><strong>1 of 1</strong><span>คนโปรดของหัวใจ</span></div><div><strong>Always</strong><span>คำตอบของเค้าเสมอ</span></div></div><button class="text-link" id="storyMore">อ่านความในใจอีกนิด <span>↗</span></button><p class="story-extra hidden" id="storyExtra">เค้าอาจจะไม่ได้เก่งเรื่องพูดหวาน ๆ ตลอดเวลา แต่เค้าจะตั้งใจรักเธอในแบบที่ทำให้เธอรู้สึกปลอดภัย เป็นตัวเองได้เต็มที่ และรู้ว่าไม่ต้องเผชิญอะไรเพียงลำพังนะ ♡</p></div></div>
+    </section>
+
+    <section class="reasons-section section" id="reasons">
+      <div class="section-label">03 / A MILLION REASONS</div><div class="center-heading"><p class="kicker">IN CASE YOU EVER FORGET</p><h2>เหตุผลที่เค้า <em>รักเธอ</em></h2><p>เลือกเปิดดูทีละใบก็ได้นะ แต่ขอบอกไว้ก่อนว่ามีมากกว่าที่เว็บนี้จะใส่ไหว ♡</p></div>
+      <div class="reason-grid" id="reasonGrid">
+        <button class="reason-card" data-title="รอยยิ้มของเธอ" data-message="รอยยิ้มของเธอทำให้วันที่เหนื่อยที่สุดของเค้าเบาลงได้เสมอ แค่เห็นเธอยิ้มก็เหมือนได้ชาร์จพลังหัวใจแล้ว"><span class="reason-number">01</span><span class="reason-icon">☼</span><strong>รอยยิ้มของเธอ</strong><span class="reason-hint">แตะเพื่อเปิดเหตุผล ↗</span></button>
+        <button class="reason-card" data-title="ความเป็นตัวเธอ" data-message="เค้ารักที่เธอเป็นเธอ ไม่ต้องเปลี่ยนตัวเองเพื่อให้สมบูรณ์แบบ เพราะสำหรับเค้า เธอมีคุณค่าในแบบที่เป็นอยู่แล้ว"><span class="reason-number">02</span><span class="reason-icon">✿</span><strong>ความเป็นตัวเธอ</strong><span class="reason-hint">แตะเพื่อเปิดเหตุผล ↗</span></button>
+        <button class="reason-card" data-title="เสียงหัวเราะของเรา" data-message="เรื่องเล็ก ๆ ที่เราแชร์กัน กลายเป็นความทรงจำที่เค้าอยากเก็บไว้นาน ๆ ขอบคุณที่ทำให้เสียงหัวเราะของเรามีความหมาย"><span class="reason-number">03</span><span class="reason-icon">♫</span><strong>เสียงหัวเราะของเรา</strong><span class="reason-hint">แตะเพื่อเปิดเหตุผล ↗</span></button>
+        <button class="reason-card" data-title="เธอใส่ใจคนอื่น" data-message="ความใส่ใจเล็ก ๆ ของเธอมีค่ามากกว่าที่เธอคิด เค้าเห็นความน่ารักของเธอในสิ่งที่เธอทำโดยไม่จำเป็นต้องมีใครเห็น"><span class="reason-number">04</span><span class="reason-icon">♡</span><strong>ความใส่ใจของเธอ</strong><span class="reason-hint">แตะเพื่อเปิดเหตุผล ↗</span></button>
+        <button class="reason-card" data-title="อยู่ด้วยแล้วสบายใจ" data-message="กับเธอ เค้าไม่จำเป็นต้องเก่งตลอดเวลา ไม่ต้องมีคำตอบให้ทุกอย่าง แค่ได้นั่งข้างกันก็รู้สึกเหมือนได้กลับบ้าน"><span class="reason-number">05</span><span class="reason-icon">☁</span><strong>อยู่ด้วยแล้วสบายใจ</strong><span class="reason-hint">แตะเพื่อเปิดเหตุผล ↗</span></button>
+        <button class="reason-card" data-title="เพราะเป็นเธอ" data-message="ถ้าต้องบอกเหตุผลทั้งหมด คงเขียนได้ทั้งจักรวาล แต่สุดท้ายเหตุผลที่สำคัญที่สุดก็คือ…เพราะคนคนนั้นคือเธอไง ♡"><span class="reason-number">06</span><span class="reason-icon">✧</span><strong>เพราะเป็นเธอ</strong><span class="reason-hint">แตะเพื่อเปิดเหตุผล ↗</span></button>
+      </div><div class="reason-footer"><span>THIS LIST IS NEVER COMPLETE</span><button class="btn btn-outline" id="addReason">เพิ่มเหตุผลของเรา +</button></div>
+    </section>
+
+    <section class="memories-section section" id="memories">
+      <div class="section-label">04 / LITTLE TIME CAPSULE</div><div class="memories-heading"><div><p class="kicker">MOMENTS I WANT TO KEEP</p><h2>คลังความทรงจำ<br><em>ของเราสองคน</em></h2></div><div class="memories-side"><p>รูปหนึ่งรูปอาจมีเวลาอยู่แค่เสี้ยววินาที แต่ความรู้สึกดี ๆ ในรูปนั้นอยู่กับเค้าได้นานแสนนาน</p><label class="upload-btn">＋ เพิ่มรูปของเรา<input type="file" id="photoUpload" accept="image/*" multiple hidden></label></div></div>
+      <div class="gallery" id="gallery"><button class="memory-card memory-tall" data-caption="วันแรก ๆ ที่ทุกอย่างเริ่มต้น"><img src="assets/memory-1.svg" alt="ภาพความทรงจำตัวอย่าง"><span class="memory-overlay"><small>MEMORY 01</small><strong>วันแรก ๆ ที่ทุกอย่างเริ่มต้น</strong><span>♡ เปิดดูความทรงจำ</span></span></button><button class="memory-card memory-wide" data-caption="โมเมนต์ธรรมดาที่พิเศษ"><img src="assets/memory-2.svg" alt="ภาพความทรงจำตัวอย่าง"><span class="memory-overlay"><small>MEMORY 02</small><strong>โมเมนต์ธรรมดาที่พิเศษ</strong><span>♡ เปิดดูความทรงจำ</span></span></button><button class="memory-card" data-caption="เธอทำให้โลกน่ารักขึ้น"><img src="assets/memory-3.svg" alt="ภาพความทรงจำตัวอย่าง"><span class="memory-overlay"><small>MEMORY 03</small><strong>เธอทำให้โลกน่ารักขึ้น</strong><span>♡ เปิดดูความทรงจำ</span></span></button><button class="memory-card" data-caption="รอยยิ้มที่อยากจำไว้นาน ๆ"><img src="assets/memory-4.svg" alt="ภาพความทรงจำตัวอย่าง"><span class="memory-overlay"><small>MEMORY 04</small><strong>รอยยิ้มที่อยากจำไว้นาน ๆ</strong><span>♡ เปิดดูความทรงจำ</span></span></button></div>
+      <p class="gallery-tip"><span>✦</span> กด “เพิ่มรูปของเรา” เพื่อใส่รูปจริงได้เลย รูปที่เพิ่มจะถูกเก็บไว้ในเบราว์เซอร์เครื่องนี้ <span>✦</span></p>
+    </section>
+
+    <section class="surprises-section section" id="surprises">
+      <div class="section-label">05 / SURPRISES FOR YOU</div><div class="center-heading"><p class="kicker">PICK YOUR LITTLE MAGIC</p><h2>ของขวัญเล็ก ๆ <em>จากหัวใจ</em></h2><p>ทุกกล่องมีอะไรซ่อนอยู่ ลองเปิดดูให้ครบทุกกล่องนะ</p></div>
+      <div class="gift-grid"><button class="gift-card" data-gift="letter"><span class="gift-ribbon"></span><span class="gift-emoji">💌</span><strong>จดหมายลับ</strong><small>A LETTER FOR YOU</small><span class="gift-open">เปิดกล่อง ↗</span></button><button class="gift-card" data-gift="date"><span class="gift-ribbon ribbon-gold"></span><span class="gift-emoji">🎟️</span><strong>คูปองพิเศษ</strong><small>ONE WISH PASS</small><span class="gift-open">เปิดกล่อง ↗</span></button><button class="gift-card" data-gift="wish"><span class="gift-ribbon ribbon-blue"></span><span class="gift-emoji">🌙</span><strong>คำอธิษฐาน</strong><small>WISH UPON A STAR</small><span class="gift-open">เปิดกล่อง ↗</span></button><button class="gift-card" data-gift="secret"><span class="gift-ribbon ribbon-pink"></span><span class="gift-emoji">🎁</span><strong>กล่องลับ</strong><small>JUST FOR YOU</small><span class="gift-open">เปิดกล่อง ↗</span></button></div>
+      <div class="wish-wall"><div class="wish-wall-icon">✧</div><div><p class="kicker">MAKE A WISH, BIRTHDAY STAR</p><h3>ขอให้ปีนี้ใจดีกับเธอ</h3><p>ขอให้ได้เจอแต่วันที่อบอุ่น มีคนรักเธออย่างที่เธอสมควรได้รับ ได้ทำสิ่งที่ตั้งใจ และในวันที่โลกใจร้าย ขอให้เธอจำได้ว่ายังมีเค้าคอยเป็นกำลังใจให้เสมอ</p></div><button id="makeWish" class="wish-button">ส่งคำอธิษฐานขึ้นฟ้า <span>↗</span></button></div>
+    </section>
+
+    <section class="cake-section section" id="cake">
+      <div class="section-label">06 / MAKE A WISH</div><div class="cake-layout"><div class="cake-copy"><p class="kicker">CLOSE YOUR EYES & WISH</p><h2>เป่าเทียนกันนะ<br><em>คนเก่งของเค้า</em></h2><p>หลับตาแล้วอธิษฐานหนึ่งข้อ จากนั้นแตะที่เป่าเทียน เค้าขอให้คำอธิษฐานของเธอค่อย ๆ กลายเป็นจริงทีละข้อเลย</p><button id="blowCandles" class="btn btn-primary">เป่าเทียนเลย! <span>✧</span></button><p class="cake-feedback" id="cakeFeedback" aria-live="polite">เทียนยังรอคำอธิษฐานของเธออยู่นะ ♡</p></div><div class="cake-stage"><div class="cake-sparkles">✦ <span>✧</span> ✦</div><div class="cake-plate"></div><div class="cake"><div class="cake-top"></div><div class="cake-layer layer-top"></div><div class="cake-layer layer-bottom"></div><div class="icing-drip drip-one"></div><div class="icing-drip drip-two"></div><div class="icing-drip drip-three"></div><div class="cake-decoration">♡　✦　♡</div><div class="candles"><i class="candle"><b class="flame"></b></i><i class="candle"><b class="flame"></b></i><i class="candle"><b class="flame"></b></i><i class="candle"><b class="flame"></b></i><i class="candle"><b class="flame"></b></i></div></div><div class="cake-shadow"></div><span class="cake-floating-heart cf-one">♥</span><span class="cake-floating-heart cf-two">♡</span></div></div>
+    </section>
+
+    <section class="letter-section section" id="letter">
+      <div class="section-label">07 / WORDS FROM MY HEART</div><div class="letter-shell"><div class="letter-side"><p class="kicker">OPEN WHEN YOU NEED A HUG</p><h2>จดหมายถึง<br><em>เธอคนเดิม</em></h2><div class="letter-stamp">WITH<br>LOVE <span>♡</span></div><p class="letter-side-note">เขียนจากความรู้สึกจริง ๆ<br>ถึงคนที่มีความหมายที่สุด</p></div><article class="letter-paper"><div class="paper-top"><span>TO MY FAVORITE HUMAN</span><span>♡ &nbsp; FOREVER</span></div><div class="letter-body"><p class="letter-dear" id="letterDear">ถึงคนเก่งของเค้า,</p><p id="letterP1">สุขสันต์วันเกิดนะคนที่เค้ารักมากที่สุด ♡</p><p id="letterP2">ขอบคุณที่เกิดมา ขอบคุณที่เป็นเธอ และขอบคุณที่ให้เค้าได้เข้ามาเป็นส่วนหนึ่งในชีวิตของเธอ เค้าไม่รู้ว่าปีต่อ ๆ ไปจะมีอะไรเกิดขึ้นบ้าง แต่เค้าอยากเรียนรู้ เติบโต และสร้างความทรงจำดี ๆ ไปพร้อมกับเธอ</p><p id="letterP3">ในวันที่เธอเหนื่อย ขอให้รู้ว่ายังมีคนคนหนึ่งที่พร้อมฟัง ในวันที่เธอภูมิใจ เค้าก็อยากเป็นคนแรก ๆ ที่ได้ยินข่าวดี และในวันที่เธอไม่มั่นใจ อย่าลืมว่าเธอมีคุณค่ามากแค่ไหน</p><p id="letterP4">ขอให้ปีใหม่นี้ของชีวิตเต็มไปด้วยความสุข ความสบายใจ และความรักที่ไม่ทำให้เธอต้องตั้งคำถามกับคุณค่าของตัวเองเลยนะ เค้าจะพยายามดูแลความรักของเราให้ดีขึ้นในทุกวัน</p><p class="letter-signoff">รักเธอมาก ๆ เสมอและตลอดไป,<br><span id="signature">คนโปรดของเธอ ♡</span></p><div class="paper-doodle">♡</div></div><div class="paper-bottom"><span>MADE WITH ALL MY HEART</span><span>EST. US TWO</span></div></article></div><div class="letter-actions"><button class="btn btn-outline" id="downloadLetter">บันทึกจดหมายเป็นไฟล์ .txt ↓</button><button class="text-link" id="editLetter">ปรับแต่งจดหมายของเรา ↗</button></div>
+    </section>
+
+    <section class="promise-section section">
+      <div class="section-label">08 / LITTLE PROMISES</div><div class="promise-heading"><p class="kicker">NOT PERFECT, BUT ALWAYS TRYING</p><h2>สิ่งที่เค้าอยาก <em>สัญญา</em></h2></div><div class="promise-list"><div class="promise-item"><span>01</span><p>จะตั้งใจฟังความรู้สึกของเธอ แม้ในวันที่เราคิดไม่เหมือนกัน</p><span class="promise-heart">♡</span></div><div class="promise-item"><span>02</span><p>จะไม่มองข้ามความพยายามเล็ก ๆ ของเธอ และจะขอบคุณให้มากขึ้น</p><span class="promise-heart">♡</span></div><div class="promise-item"><span>03</span><p>จะเติบโตไปด้วยกัน ให้พื้นที่กันได้เป็นตัวเองและเป็นกำลังใจให้กัน</p><span class="promise-heart">♡</span></div><div class="promise-item"><span>04</span><p>จะเลือกแก้ปัญหาไปด้วยกัน แทนที่จะปล่อยให้ปัญหามายืนอยู่ระหว่างเรา</p><span class="promise-heart">♡</span></div><div class="promise-item"><span>05</span><p>จะหาเรื่องเล็ก ๆ มาทำให้เธอยิ้มได้ แม้จะไม่ใช่วันพิเศษก็ตาม</p><span class="promise-heart">♡</span></div></div>
+    </section>
+
+    <section class="finale-section section" id="finale"><div class="finale-stars">✦　⋆　✧　⋆　✦</div><p class="kicker">THE UNIVERSE IS LUCKY TO HAVE YOU</p><h2>สุขสันต์วันเกิดนะ<br><em id="finalName">เจ้าความสุขของเค้า</em></h2><p class="finale-message" id="finalMessage">ขอให้ทุก ๆ วันต่อจากนี้มีเหตุผลให้เธอยิ้มได้เยอะ ๆ และขอให้เธอถูกรักอย่างอ่อนโยนเสมอ</p><button class="finale-heart" id="bigHeart" aria-label="ส่งหัวใจ">♥</button><p class="finale-sign">FROM MY HEART TO YOURS, ALWAYS.</p><button class="btn btn-outline" id="finalFireworks">ทำให้ท้องฟ้าสว่างเพื่อเธออีกครั้ง ✨</button></section>
+  </main>
+
+  <footer class="footer"><a class="brand" href="#home"><span class="brand-mark">♡</span><span>OUR LITTLE UNIVERSE</span></a><p>THIS LITTLE WEBSITE WAS BUILT WITH LOVE <span>♥</span></p><a href="#home" class="back-top">กลับขึ้นด้านบน ↑</a></footer>
+
+  <div id="modalBackdrop" class="modal-backdrop" aria-hidden="true"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="modalClose" aria-label="ปิด">×</button><div id="modalContent"></div></div></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="introOverlay" class="intro-overlay"><div class="intro-orbit intro-orbit-one"></div><div class="intro-orbit intro-orbit-two"></div><div class="intro-content"><div class="intro-kicker">A SECRET LITTLE UNIVERSE</div><div class="intro-heart">♥</div><p>มีบางอย่างที่เค้าอยากให้เธอเห็น…</p><h2>ถึงเธอคนพิเศษ</h2><button class="btn btn-primary" id="enterSite">เปิดประตูสู่เซอร์ไพรส์ <span>♡</span></button><small>BEST VIEWED WITH YOUR HEART OPEN</small></div></div>
+  <script src="app.js"></script>
+</body>
+</html>
